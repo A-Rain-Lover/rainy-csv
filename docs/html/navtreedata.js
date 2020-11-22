@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "Rainy CSV", "index.html", [
     [ "Getting started", "index.html#gs", null ],
+    [ "Licence", "index.html#l", null ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
