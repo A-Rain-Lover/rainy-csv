@@ -1,0 +1,319 @@
+\hypertarget{csv_8h}{}\section{/home/yuun/csv/src/csv.h File Reference}
+\label{csv_8h}\index{/home/yuun/csv/src/csv.\+h@{/home/yuun/csv/src/csv.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for csv.\+h\+:
+% FIG 0
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{csv_8h_abee5e2be01d5da066f5ddc863939ed73}\label{csv_8h_abee5e2be01d5da066f5ddc863939ed73}} 
+typedef void $\ast$ {\bfseries csv\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+csv\+\_\+t $\ast$ \hyperlink{csv_8h_a70724ea3f2692913c58993eed74a8e8e}{csv\+\_\+parse} (char $\ast$raw\+\_\+csv, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Parses a csv string to a csv\+\_\+t. \end{DoxyCompactList}\item 
+csv\+\_\+t \hyperlink{csv_8h_aa9762b714c418427d010db98f01f6428}{csv\+\_\+load} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Loads a .csv file. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_ae0f94269a101565bb84f9939a56e2c0c}{csv\+\_\+save} (csv\+\_\+t csv)
+\begin{DoxyCompactList}\small\item\em Saves changes to the actual file. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a44d3748b80c9d3b95d34ed1db53e11d0}{csv\+\_\+destroy} (csv\+\_\+t csv)
+\begin{DoxyCompactList}\small\item\em Destroys a csv\+\_\+t instance. \end{DoxyCompactList}\item 
+csv\+\_\+t \hyperlink{csv_8h_aafb523d2150d768610176dee50be1b59}{csv\+\_\+init} (size\+\_\+t col\+\_\+count, char $\ast$$\ast$col\+\_\+names, const char $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Initializes an empty csv\+\_\+t instance. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a11cd0ff8738e91b94cb7aab5ced78520}{csv\+\_\+get\+\_\+row} (csv\+\_\+t csv, size\+\_\+t row\+\_\+nbr, char $\ast$$\ast$out)
+\begin{DoxyCompactList}\small\item\em Fetches one row. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{csv_8h_a32c2d816f4fd5c827069f83b90116416}{csv\+\_\+get\+\_\+value} (csv\+\_\+t csv, size\+\_\+t row\+\_\+nbr, size\+\_\+t col\+\_\+nbr)
+\begin{DoxyCompactList}\small\item\em fetches one value \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_afd19052893324884e64fc2e53ad98c2e}{csv\+\_\+append} (csv\+\_\+t csv, char $\ast$$\ast$row)
+\begin{DoxyCompactList}\small\item\em Appends a whole row to the end of the csv. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a3c3ee2edec72da28365bd9e9ae253106}{csv\+\_\+add\+\_\+at} (csv\+\_\+t csv, size\+\_\+t position, char $\ast$$\ast$row)
+\begin{DoxyCompactList}\small\item\em Adds a whole row in the given position. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a0a6f45eb7153228c2a5a0cc779e02007}{csv\+\_\+delete\+\_\+row} (csv\+\_\+t csv, size\+\_\+t row\+\_\+nbr)
+\begin{DoxyCompactList}\small\item\em Deletes a whole row from the csv. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a45d7841ca5cfa1283e9ea5f45a25ac57}{csv\+\_\+edit\+\_\+value} (csv\+\_\+t csv, size\+\_\+t row\+\_\+nbr, size\+\_\+t col\+\_\+nbr, char $\ast$new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Edits a value. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{csv_8h_a33928cd3be6ccb25c357855696dbb14c}{csv\+\_\+count\+\_\+rows} (csv\+\_\+t csv)
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{csv_8h_aa95faf43c0beefcd16e37e96381725d8}{csv\+\_\+count\+\_\+cols} (csv\+\_\+t csv)
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+void \hyperlink{csv_8h_a2cb1548c9db515d623a63a341d40667e}{csv\+\_\+print} (csv\+\_\+t csv)
+\begin{DoxyCompactList}\small\item\em Prints the formatted csv in the stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Yuun $\vert$ A-\/\+Rain-\/\+Lover 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{csv_8h_a3c3ee2edec72da28365bd9e9ae253106}\label{csv_8h_a3c3ee2edec72da28365bd9e9ae253106}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+add\+\_\+at@{csv\+\_\+add\+\_\+at}}
+\index{csv\+\_\+add\+\_\+at@{csv\+\_\+add\+\_\+at}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+add\+\_\+at()}{csv\_add\_at()}}
+{\footnotesize\ttfamily void csv\+\_\+add\+\_\+at (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{size\+\_\+t}]{position,  }\item[{char $\ast$$\ast$}]{row }\end{DoxyParamCaption})}
+
+
+
+Adds a whole row in the given position. 
+
+\begin{DoxyWarning}{Warning}
+Not implemented yet 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to add to \\
+\hline
+{\em position} & The index where the new row should be \\
+\hline
+{\em row} & The row to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_afd19052893324884e64fc2e53ad98c2e}\label{csv_8h_afd19052893324884e64fc2e53ad98c2e}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+append@{csv\+\_\+append}}
+\index{csv\+\_\+append@{csv\+\_\+append}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+append()}{csv\_append()}}
+{\footnotesize\ttfamily void csv\+\_\+append (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{char $\ast$$\ast$}]{row }\end{DoxyParamCaption})}
+
+
+
+Appends a whole row to the end of the csv. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to append to \\
+\hline
+{\em row} & The row to append \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_aa95faf43c0beefcd16e37e96381725d8}\label{csv_8h_aa95faf43c0beefcd16e37e96381725d8}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+count\+\_\+cols@{csv\+\_\+count\+\_\+cols}}
+\index{csv\+\_\+count\+\_\+cols@{csv\+\_\+count\+\_\+cols}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+count\+\_\+cols()}{csv\_count\_cols()}}
+{\footnotesize\ttfamily size\+\_\+t csv\+\_\+count\+\_\+cols (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a33928cd3be6ccb25c357855696dbb14c}\label{csv_8h_a33928cd3be6ccb25c357855696dbb14c}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+count\+\_\+rows@{csv\+\_\+count\+\_\+rows}}
+\index{csv\+\_\+count\+\_\+rows@{csv\+\_\+count\+\_\+rows}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+count\+\_\+rows()}{csv\_count\_rows()}}
+{\footnotesize\ttfamily size\+\_\+t csv\+\_\+count\+\_\+rows (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a0a6f45eb7153228c2a5a0cc779e02007}\label{csv_8h_a0a6f45eb7153228c2a5a0cc779e02007}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+delete\+\_\+row@{csv\+\_\+delete\+\_\+row}}
+\index{csv\+\_\+delete\+\_\+row@{csv\+\_\+delete\+\_\+row}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+delete\+\_\+row()}{csv\_delete\_row()}}
+{\footnotesize\ttfamily void csv\+\_\+delete\+\_\+row (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{size\+\_\+t}]{row\+\_\+nbr }\end{DoxyParamCaption})}
+
+
+
+Deletes a whole row from the csv. 
+
+\begin{DoxyWarning}{Warning}
+Not implemented yet 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to delete from \\
+\hline
+{\em row\+\_\+nbr} & The row number to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a44d3748b80c9d3b95d34ed1db53e11d0}\label{csv_8h_a44d3748b80c9d3b95d34ed1db53e11d0}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+destroy@{csv\+\_\+destroy}}
+\index{csv\+\_\+destroy@{csv\+\_\+destroy}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+destroy()}{csv\_destroy()}}
+{\footnotesize\ttfamily void csv\+\_\+destroy (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv }\end{DoxyParamCaption})}
+
+
+
+Destroys a csv\+\_\+t instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv to destroy (obviously) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a45d7841ca5cfa1283e9ea5f45a25ac57}\label{csv_8h_a45d7841ca5cfa1283e9ea5f45a25ac57}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+edit\+\_\+value@{csv\+\_\+edit\+\_\+value}}
+\index{csv\+\_\+edit\+\_\+value@{csv\+\_\+edit\+\_\+value}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+edit\+\_\+value()}{csv\_edit\_value()}}
+{\footnotesize\ttfamily void csv\+\_\+edit\+\_\+value (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{size\+\_\+t}]{row\+\_\+nbr,  }\item[{size\+\_\+t}]{col\+\_\+nbr,  }\item[{char $\ast$}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Edits a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to edit \\
+\hline
+{\em row\+\_\+nbr} & The value\textquotesingle{}s row number \\
+\hline
+{\em col\+\_\+nbr} & The value\textquotesingle{}s column number \\
+\hline
+{\em value} & The new value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a11cd0ff8738e91b94cb7aab5ced78520}\label{csv_8h_a11cd0ff8738e91b94cb7aab5ced78520}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+get\+\_\+row@{csv\+\_\+get\+\_\+row}}
+\index{csv\+\_\+get\+\_\+row@{csv\+\_\+get\+\_\+row}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+get\+\_\+row()}{csv\_get\_row()}}
+{\footnotesize\ttfamily void csv\+\_\+get\+\_\+row (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{size\+\_\+t}]{row\+\_\+nbr,  }\item[{char $\ast$$\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Fetches one row. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em csv} & The csv\+\_\+t instance to fetch from \\
+\hline
+ & {\em row\+\_\+nbr} & The number of the row to get \\
+\hline
+\mbox{\tt out}  & {\em out} & Where to put it \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{csv_8h_a32c2d816f4fd5c827069f83b90116416}\label{csv_8h_a32c2d816f4fd5c827069f83b90116416}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+get\+\_\+value@{csv\+\_\+get\+\_\+value}}
+\index{csv\+\_\+get\+\_\+value@{csv\+\_\+get\+\_\+value}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+get\+\_\+value()}{csv\_get\_value()}}
+{\footnotesize\ttfamily char$\ast$ csv\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv,  }\item[{size\+\_\+t}]{row\+\_\+nbr,  }\item[{size\+\_\+t}]{col\+\_\+nbr }\end{DoxyParamCaption})}
+
+
+
+fetches one value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to fetch from \\
+\hline
+{\em row\+\_\+nbr} & The number of the row \\
+\hline
+{\em col\+\_\+nbr} & The number of the column\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value as a char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{csv_8h_aafb523d2150d768610176dee50be1b59}\label{csv_8h_aafb523d2150d768610176dee50be1b59}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+init@{csv\+\_\+init}}
+\index{csv\+\_\+init@{csv\+\_\+init}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+init()}{csv\_init()}}
+{\footnotesize\ttfamily csv\+\_\+t csv\+\_\+init (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{col\+\_\+count,  }\item[{char $\ast$$\ast$}]{col\+\_\+names,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Initializes an empty csv\+\_\+t instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+count} & Number of columns \\
+\hline
+{\em col\+\_\+names} & Columns\textquotesingle{} titles \\
+\hline
+{\em file\+\_\+path} & Path to the file, used when saving\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new initialized csv\+\_\+t instance
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For some reason, the fact that parameter names are of equal length made me so happy lol \+:D 
+\end{DoxyNote}
+\mbox{\Hypertarget{csv_8h_aa9762b714c418427d010db98f01f6428}\label{csv_8h_aa9762b714c418427d010db98f01f6428}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+load@{csv\+\_\+load}}
+\index{csv\+\_\+load@{csv\+\_\+load}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+load()}{csv\_load()}}
+{\footnotesize\ttfamily csv\+\_\+t csv\+\_\+load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads a .csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the csv file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+No need to a close function since the file descriptor is closed automatically after loading, and reopened when needed (eg. when saving)
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+csv\+\_\+t instance representing the .csv file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{csv_8h_a70724ea3f2692913c58993eed74a8e8e}\label{csv_8h_a70724ea3f2692913c58993eed74a8e8e}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+parse@{csv\+\_\+parse}}
+\index{csv\+\_\+parse@{csv\+\_\+parse}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+parse()}{csv\_parse()}}
+{\footnotesize\ttfamily csv\+\_\+t$\ast$ csv\+\_\+parse (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+\_\+csv,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Parses a csv string to a csv\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+csv} & the raw csv string \\
+\hline
+{\em length} & length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The default filename will be untitled.\+csv so consider changing the filename when saving
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+the resulting csv\+\_\+t instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{csv_8h_a2cb1548c9db515d623a63a341d40667e}\label{csv_8h_a2cb1548c9db515d623a63a341d40667e}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+print@{csv\+\_\+print}}
+\index{csv\+\_\+print@{csv\+\_\+print}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+print()}{csv\_print()}}
+{\footnotesize\ttfamily void csv\+\_\+print (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv }\end{DoxyParamCaption})}
+
+
+
+Prints the formatted csv in the stdout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This will print nightmares if the csv is long or if the cells have long values 
+\end{DoxyWarning}
+\mbox{\Hypertarget{csv_8h_ae0f94269a101565bb84f9939a56e2c0c}\label{csv_8h_ae0f94269a101565bb84f9939a56e2c0c}} 
+\index{csv.\+h@{csv.\+h}!csv\+\_\+save@{csv\+\_\+save}}
+\index{csv\+\_\+save@{csv\+\_\+save}!csv.\+h@{csv.\+h}}
+\subsubsection{\texorpdfstring{csv\+\_\+save()}{csv\_save()}}
+{\footnotesize\ttfamily void csv\+\_\+save (\begin{DoxyParamCaption}\item[{csv\+\_\+t}]{csv }\end{DoxyParamCaption})}
+
+
+
+Saves changes to the actual file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv} & The csv\+\_\+t instance to save (obviously) \\
+\hline
+\end{DoxyParams}
