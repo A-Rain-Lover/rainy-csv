@@ -156,7 +156,7 @@ void	csv_print(csv_t csv);
 /*!
  *
  * \mainpage Rainy CSV
- * An open source CSV manipulating library made by a rain lover
+ * An open source CSV manipulating library
  * <br />
  * \note This is still work in progress
  * 
