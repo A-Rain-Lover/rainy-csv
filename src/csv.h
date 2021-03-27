@@ -1,6 +1,6 @@
 /**
  *	@file csv.h
- *	@author Yuun | A-Rain-Lover
+ *	@author computer-spectre
  * */
 
 #ifndef _CSV_H_
