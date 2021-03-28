@@ -159,7 +159,7 @@ void	csv_print(csv_t csv);
  * <br />
  * \note This is still work in progress
  * 
- * <a href="https://www.github.com/computer-spectre/rainy-csv">Visit the GitHub repo</a>
+ * <a href="https://www.github.com/hazyuun/rainy-csv">Visit the GitHub repo</a>
  * 
  * \section gs Getting started
  * I found it somehow weired to make it compile to a `.a` file with only one file,
@@ -169,7 +169,7 @@ void	csv_print(csv_t csv);
  * \section l Licence
  * MIT License
  * 
- * Copyright (c) 2020 computer-spectre (Yuun)
+ * Copyright (c) 2020 hazyuun (Yuun)
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
