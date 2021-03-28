@@ -1,6 +1,5 @@
 /**
  *	@file csv.h
- *	@author computer-spectre
  * */
 
 #ifndef _CSV_H_
